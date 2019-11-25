@@ -9,6 +9,5 @@ app.listen(APP_PORT, () => {
 });
 
 // TODO
-// Change express router to express router promise
 // JsonRenderer return {  data: some data, error: some error, _stack: some error stack }
 // Add database to Docker

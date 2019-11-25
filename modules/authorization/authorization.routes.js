@@ -1,6 +1,6 @@
-const express = require('express');
+const Router = require('express-promise-router');
 
-const authorizationRouter = express.Router();
+const authorizationRouter = Router();
 
 const AuthorizationController = require('./authorization.controller');
 const { register, signIn, signOut, forgotPassword, resetPassword, updatePassword } = new AuthorizationController();
