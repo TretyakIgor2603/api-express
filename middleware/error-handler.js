@@ -10,8 +10,12 @@ const errorHandler = (error, req, res, next) => {
             .status(error.statusCode)
             .json({
                 success: false,
-                message: error.message,
-                stackDevOnly: IS_DEV ? error.stack && error.stack.split('\n') : undefined
+                error: {
+                    message: error.message,
+                },
+                _stack: {
+                    message: IS_DEV ? error.stack && error.stack.split('\n') : undefined,
+                },
             });
     }
 
@@ -19,7 +23,9 @@ const errorHandler = (error, req, res, next) => {
         .status(HTTP_STATUS.INTERNAL_SERVER_ERROR)
         .json({
             success: false,
-            message: IS_DEV ? error.message : 'Oops! Something went wrong.'
+            error: {
+                message: IS_DEV ? error.message : 'Oops! Something went wrong.',
+            },
         });
 };
 

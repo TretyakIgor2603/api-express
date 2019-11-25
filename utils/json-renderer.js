@@ -5,8 +5,8 @@ class JsonRenderer {
         res
             .status(HTTP_STATUS.OK)
             .json({
+                data,
                 success: true,
-                ...data
             });
     }
 
@@ -14,8 +14,8 @@ class JsonRenderer {
         res
             .status(HTTP_STATUS.CREATED)
             .json({
-                success: true,
-                ...data
+                data,
+                success: true
             });
     }
 }
