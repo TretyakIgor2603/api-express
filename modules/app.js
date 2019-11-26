@@ -1,6 +1,7 @@
 const express = require('express');
 const dotEnv = require('dotenv');
 const morgan = require('morgan');
+const cors = require('cors');
 
 const { IS_DEV } = require('../constants/environments.js');
 const HTTP_STATUS = require('../constants/http-status');
@@ -18,6 +19,8 @@ app.use(express.json());
 if (IS_DEV) {
     app.use(morgan('dev'));
 }
+// Enable CORS
+app.use(cors());
 
 app.use('/api/v1', router);
 
