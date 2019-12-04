@@ -28,4 +28,6 @@ services:
         ports:
             - 3000:8080
         volumes:
-            - ./:/var/www/api-v1
+            - ./:${APP_DIR}
+        depends_on:
+          - db
