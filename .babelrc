@@ -1,0 +1,5 @@
+{
+    "passPerPreset": true,
+    "sourceMaps": true,
+    "presets": ["env", "stage-0"]
+}

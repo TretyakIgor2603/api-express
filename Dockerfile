@@ -17,11 +17,11 @@ RUN curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n \
 # Set the working directory
 WORKDIR $APP_DIR
 
-# Install app dependencies
+# Install server dependencies
 COPY ./package*.json ./
 RUN npm install
 
-# Bundle app source
+# Bundle server source
 COPY . .
 
 RUN chmod -R 777 /var

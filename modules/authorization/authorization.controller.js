@@ -1,5 +1,6 @@
-const { authorizationLogger } = require('../../configs/loggers');
-const JsonRenderer = require('../../utils/json-renderer');
+import { authorizationLogger } from '../../configs/loggers';
+import JsonRenderer from '../../utils/json-renderer';
+
 
 class AuthorizationController extends JsonRenderer {
     /**
@@ -8,7 +9,7 @@ class AuthorizationController extends JsonRenderer {
      * @path                api/v1/auth/register
      * @access              public
      */
-    register = (req, res) => {
+    register = async (req, res) => {
         this.success(res, { message: 'Register user' });
         authorizationLogger.info('Register user.');
     };
@@ -69,4 +70,4 @@ class AuthorizationController extends JsonRenderer {
     };
 }
 
-module.exports = AuthorizationController;
+export default AuthorizationController;

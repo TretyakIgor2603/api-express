@@ -1,9 +1,9 @@
-const Router = require('express-promise-router');
+import Router from 'express-promise-router';
+import authorizationRoutes from './authorization/authorization.routes';
+
 
 const router = Router();
 
-const authorizationRoutes = require('./authorization/authorization.routes');
-
 router.use('/auth', authorizationRoutes);
 
-module.exports = router;
+export default router;

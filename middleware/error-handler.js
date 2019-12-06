@@ -1,6 +1,7 @@
-const { IS_DEV } = require('../constants/environments');
-const HTTP_STATUS = require('../constants/http-status');
-const { errorLogger } = require('../configs/loggers');
+import { IS_DEV } from '../constants/global';
+import { HTTP_STATUS } from '../constants/http-status';
+import { errorLogger } from '../configs/loggers';
+
 
 const errorHandler = (error, req, res, next) => {
     errorLogger.error(error.toString());
@@ -11,11 +12,11 @@ const errorHandler = (error, req, res, next) => {
             .json({
                 success: false,
                 error: {
-                    message: error.message,
+                    message: error.message
                 },
                 _stack: {
-                    message: IS_DEV ? error.stack && error.stack.split('\n') : undefined,
-                },
+                    message: IS_DEV ? error.stack && error.stack.split('\n') : undefined
+                }
             });
     }
 
@@ -24,9 +25,9 @@ const errorHandler = (error, req, res, next) => {
         .json({
             success: false,
             error: {
-                message: IS_DEV ? error.message : 'Oops! Something went wrong.',
-            },
+                message: IS_DEV ? error.message : 'Oops! Something went wrong.'
+            }
         });
 };
 
-module.exports = errorHandler;
+export default errorHandler;

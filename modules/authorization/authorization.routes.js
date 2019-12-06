@@ -1,15 +1,15 @@
-const Router = require('express-promise-router');
+import Router from 'express-promise-router';
+import AuthorizationController from './authorization.controller';
+
 
 const authorizationRouter = Router();
-
-const AuthorizationController = require('./authorization.controller');
 const { register, signIn, signOut, forgotPassword, resetPassword, updatePassword } = new AuthorizationController();
 
 authorizationRouter.post('/register', register);
 authorizationRouter.post('/sign-in', signIn);
-authorizationRouter.post('/sign-out', signOut);
+authorizationRouter.get('/sign-out', signOut);
 authorizationRouter.post('/forgot-password', forgotPassword);
-authorizationRouter.post('/reset-password/:resetToken', resetPassword);
-authorizationRouter.post('/update-password', updatePassword);
+authorizationRouter.put('/reset-password/:resetToken', resetPassword);
+authorizationRouter.put('/update-password', updatePassword);
 
-module.exports = authorizationRouter;
+export default authorizationRouter;
