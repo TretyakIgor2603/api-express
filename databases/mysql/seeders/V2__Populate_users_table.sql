@@ -1,0 +1,10 @@
+INSERT INTO users VALUES (0, 'Leanne', 'Graham', 'Sincere@april.biz');
+INSERT INTO users VALUES (0, 'Ervin', 'Howell', 'Shanna@melissa.tv');
+INSERT INTO users VALUES (0, 'Clementine', 'Bauch', 'Nathan@yesenia.net');
+INSERT INTO users VALUES (0, 'Patricia', 'Lebsack', 'Julianne.OConner@kory.org');
+INSERT INTO users VALUES (0, 'Chelsey', 'Dietrich', 'Lucio_Hettinger@annie.ca');
+INSERT INTO users VALUES (0, 'Mrs. Dennis', 'Schulist', 'Karley_Dach@jasper.info');
+INSERT INTO users VALUES (0, 'Kurtis', 'Weissnat', 'Telly.Hoeger@billy.biz');
+INSERT INTO users VALUES (0, 'Nicholas', 'Runolfsdottir V', 'Sherwood@rosamond.me');
+INSERT INTO users VALUES (0, 'Glenna', 'Reichert', 'Chaim_McDermott@dana.io');
+INSERT INTO users VALUES (0, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz');

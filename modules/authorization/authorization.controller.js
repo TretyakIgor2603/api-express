@@ -1,7 +1,6 @@
 import { authorizationLogger } from '../../configs/loggers';
 import JsonRenderer from '../../utils/json-renderer';
 
-
 class AuthorizationController extends JsonRenderer {
     /**
      * @description         Register user
