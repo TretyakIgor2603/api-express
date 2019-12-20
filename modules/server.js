@@ -1,16 +1,14 @@
-import 'babel-polyfill';
-import express from 'express';
-import dotEnv from 'dotenv';
-import morgan from 'morgan';
-import cors from 'cors';
+const express = require('express');
+const dotEnv = require('dotenv');
+const morgan = require('morgan');
+const cors = require('cors');
 
-import { IS_DEV } from '../constants/global';
-import { HTTP_STATUS } from '../constants/http-status';
-import ApiError from '../utils/api-error';
-import router from './router';
+const { IS_DEV } = require('../constants/global');
+const { HTTP_STATUS } = require('../constants/http-status');
+const ApiError = require('../utils/api-error');
+const router = require('./router');
 
-import errorHandler from '../middleware/error-handler';
-
+const errorHandler = require('../middleware/error-handler');
 
 dotEnv.config();
 
@@ -33,4 +31,4 @@ server.use((req, res, next) => {
 
 server.use(errorHandler);
 
-export default server;
+module.exports = server;

@@ -1,5 +1,4 @@
-import { HTTP_STATUS } from '../constants/http-status';
-
+const { HTTP_STATUS } = require('../constants/http-status');
 
 class ApiError extends Error {
     constructor(message, statusCode = HTTP_STATUS.INTERNAL_SERVER_ERROR) {
@@ -10,4 +9,4 @@ class ApiError extends Error {
     }
 }
 
-export default ApiError;
+module.expors = ApiError;

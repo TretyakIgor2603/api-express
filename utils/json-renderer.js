@@ -1,5 +1,4 @@
-import { HTTP_STATUS } from '../constants/http-status';
-
+const { HTTP_STATUS } = require('../constants/http-status');
 
 class JsonRenderer {
     success(res, data = {}) {
@@ -21,4 +20,4 @@ class JsonRenderer {
     }
 }
 
-export default JsonRenderer;
+module.exports = JsonRenderer;

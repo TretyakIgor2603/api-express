@@ -1,7 +1,6 @@
-import { IS_DEV } from '../constants/global';
-import { HTTP_STATUS } from '../constants/http-status';
-import { errorLogger } from '../configs/loggers';
-
+const { IS_DEV } = require('../constants/global');
+const { HTTP_STATUS } = require('../constants/http-status');
+const { errorLogger } = require('../configs/loggers');
 
 const errorHandler = (error, req, res, next) => {
     errorLogger.error(error.toString());
@@ -30,4 +29,4 @@ const errorHandler = (error, req, res, next) => {
         });
 };
 
-export default errorHandler;
+module.exports = errorHandler;

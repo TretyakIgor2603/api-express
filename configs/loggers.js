@@ -1,5 +1,4 @@
-import winston from 'winston';
-
+const winston = require('winston');
 
 const { combine, timestamp, label, printf } = winston.format;
 
@@ -39,7 +38,7 @@ const errorLogger = winston.createLogger({
     ]
 });
 
-export {
+module.exports = {
     authorizationLogger,
     errorLogger
 };

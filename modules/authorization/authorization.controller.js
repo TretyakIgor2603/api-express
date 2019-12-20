@@ -1,5 +1,5 @@
-import { authorizationLogger } from '../../configs/loggers';
-import JsonRenderer from '../../utils/json-renderer';
+const { authorizationLogger } = require('../../configs/loggers');
+const JsonRenderer = require('../../utils/json-renderer');
 
 class AuthorizationController extends JsonRenderer {
     /**
@@ -69,4 +69,4 @@ class AuthorizationController extends JsonRenderer {
     };
 }
 
-export default AuthorizationController;
+module.exports = AuthorizationController;

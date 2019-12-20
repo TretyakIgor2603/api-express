@@ -1,4 +1,4 @@
-export const HTTP_STATUS = {
+const HTTP_STATUS = {
     CONTINUE: 100,
     SWITCHING_PROTOCOLS: 101,
     PROCESSING: 102,
@@ -55,3 +55,5 @@ export const HTTP_STATUS = {
     NOT_EXTENDED: 510,
     NETWORK_AUTHENTICATION_REQUIRED: 511
 };
+
+module.exports = { HTTP_STATUS };

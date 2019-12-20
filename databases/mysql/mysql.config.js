@@ -1,5 +1,4 @@
-import mysql from 'mysql2/promise';
-
+const mysql = require('mysql2/promise');
 
 const createPool = async () => {
     const config = {
@@ -22,4 +21,4 @@ const execute = async (queryString, params = null) => {
     return { rows };
 };
 
-export default { execute };
+module.exports = { execute };

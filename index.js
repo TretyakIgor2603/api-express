@@ -1,7 +1,6 @@
-import 'colors';
-import server from './modules/server';
-import { SERVER_PORT, SERVER_HOST } from './constants/global';
-
+require('colors');
+const server = require('./modules/server');
+const { SERVER_PORT, SERVER_HOST } = require('./constants/global');
 
 server.listen(SERVER_PORT, () => {
     console.log(
